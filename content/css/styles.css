@@ -2,6 +2,18 @@ body{
     background-color:aquamarine;
 }
 
-.projectButton{
+/* .projectButton{
     
-}
+} */
+.column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+  }
+  
+  /* Stops the float property from affecting content after the columns */
+  .columns:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
