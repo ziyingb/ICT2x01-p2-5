@@ -1,123 +1,74 @@
 <%- include('layout.ejs'); %>
-<%- include('projectModal.ejs'); %>
+  <%- include('projectModal.ejs'); %>
 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="card-deck pt-5 pb-5">
 
-      <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <a href="#">
-          <h5 class="card-title text-center stretched-link">TUTORIAL</h5>
-          <img
-            class="card-img-top"
-            src="images/logoinsta.png"
-            width="100"
-            height="180"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <p class="card-text">
-              Learn the basics of KiddyBlock and how to connect your robot car.
-            </p>
+    <div class="container">
+      <div class="row justify-content-center" id="blockCategory">
+        <div class="card-deck pt-5 pb-5">
+          <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <h5 class="card-title text-center" id="tutorial">TUTORIAL</h5>
+            <img class="card-img-top" src="images/tutorial.png" width="100" height="180" alt="Card image cap" />
+            <div class="card-body">
+              <p class="card-text">
+                Learn the basics of KiddyBlock and how to connect your robot car.
+              </p>
+            </div>
           </div>
-        </a>
-      </div>
 
-      <div class="card border border-info pt-2">
-        <a href="http://google.com">
-          <h5 class="card-title text-center">DELAYS</h5>
-          <img
-            class="card-img-top"
-            src="images/logoinsta.png"
-            width="100"
-            height="180"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <p class="card-text">
-              Learn about delays and how to use them in your program.
-            </p>
+          <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg1">
+            <h5 class="card-title text-center" id="delay">DELAYS</h5>
+            <img class="card-img-top" src="images/delay.png" width="100" height="180" alt="Card image cap" />
+            <div class="card-body">
+              <p class="card-text">
+                Learn about delays and how to use them in your program.
+              </p>
+            </div>
           </div>
-        </a>
-      </div>
 
-      <div class="card border border-info pt-2">
-        <a href="http://google.com">
-          <h5 class="card-title text-center">DC MOTORS</h5>
-          <img
-            class="card-img-top"
-            src="images/logoinsta.png"
-            width="100"
-            height="180"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <p class="card-text">
-              Learn how to control the speed and direction of the motors.
-            </p>
+          <div class="card border border-info pt-2">
+            <h5 class="card-title text-center" id="dcmotor">DC MOTORS</h5>
+            <img class="card-img-top" src="images/logoinsta.png" width="100" height="180" alt="Card image cap" />
+            <div class="card-body">
+              <p class="card-text">
+                Learn how to control the speed and direction of the motors.
+              </p>
+            </div>
           </div>
-        </a>
-      </div>
-    </div>
+        </div>
 
-    <div class="card-deck pb-5">
-      <div class="card border border-info pt-2">
-        <a href="http://google.com">
-          <h5 class="card-title text-center">LOOPS</h5>
-          <img
-            class="card-img-top"
-            src="images/logoinsta.png"
-            width="100"
-            height="180"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <p class="card-text">
-              Learn how to use loops in this section to control the robot car.
-            </p>
+        <div class="card-deck pb-5">
+          <div class="card border border-info pt-2">
+            <h5 class="card-title text-center" id="loops">LOOPS</h5>
+            <img class="card-img-top" src="images/loops.png" width="100" height="180" alt="Card image cap" />
+            <div class="card-body">
+              <p class="card-text">
+                Learn how to use loops in this section to control the robot car.
+              </p>
+            </div>
           </div>
-        </a>
-      </div>
 
-      <div class="card border border-info pt-2">
-        <a href="http://google.com">
-          <h5 class="card-title text-center">IF ELSE</h5>
-          <img
-            class="card-img-top"
-            src="images/logoinsta.png"
-            width="100"
-            height="180"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <p class="card-text">
-              Learn how to use conditional statement to handle different sensors
-              of our robot car.
-            </p>
+
+          <div class="card border border-info pt-2">
+            <h5 class="card-title text-center" id="ifelse">IF ELSE</h5>
+            <img class="card-img-top" src="images/ifelse.jpg" width="100" height="180" alt="Card image cap" />
+            <div class="card-body">
+              <p class="card-text">
+                Learn how to use conditional statement to handle different sensors
+                of our robot car.
+              </p>
+            </div>
           </div>
-        </a>
-      </div>
 
-      <div class="card border border-info pt-2">
-        <a href="http://google.com">
-          <h5 class="card-title text-center">CUSTOM</h5>
-          <img
-            class="card-img-top"
-            src="images/logoinsta.png"
-            width="100"
-            height="180"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <p class="card-text">Code a custom program for your robot car!</p>
-            <!-- <p class="card-text">
+          <div class="card border border-info pt-2">
+            <h5 class="card-title text-center" id="custom">CUSTOM</h5>
+            <img class="card-img-top" src="images/custom.png" width="100" height="180" alt="Card image cap" />
+            <div class="card-body">
+              <p class="card-text">Code a custom program for your robot car!</p>
+              <!-- <p class="card-text">
               <small class="text-muted">Last updated 3 mins ago</small>
             </p> -->
+            </div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-
