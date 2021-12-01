@@ -2,13 +2,17 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">TUTORIAL</h5>
+            <!-- <h5 class="modal-title" id="exampleModalLongTitle">TUTORIAL</h5> -->
+            <a class="text-primary text-decoration-none viewCategoryModal" data-tutorial="<%=home.tutorial%>"
+              data-delay="<%=home.delay%>" data-dcmotor="<%=home.dcmotor%>"
+              data-loops="<%=home.loops%>" data-ifelse="<%=home.ifelse%>" 
+              data-custom="<%=home.custom%>"></a>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <div class="columns">
+            <!-- <div class="columns">
               <div class="column">
                 Challenge 1
                 
@@ -19,12 +23,13 @@
               <div class="column">
                 Challenge 3
               </div>
-            </div>
+            </div> -->
+            <h3 style="text-align: center">Are You Ready?</h3>
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-            <button type="button" class="btn btn-primary">BEGIN</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+            <button type="button" class="btn btn-primary">YES</button>
           </div>
         </div>
       </div>
