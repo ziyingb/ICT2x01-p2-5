@@ -17,4 +17,6 @@ $('#CategoryModal').on('click',".viewCategoryModal",function(e){
   $('#loops').val(tabTrigger.loops);
   $('#ifelse').val(tabTrigger.ifelse);
   $('#custom').val(tabTrigger.custom);
-})
+  
+  $('#viewCategoryModal').modal('show');
+});
