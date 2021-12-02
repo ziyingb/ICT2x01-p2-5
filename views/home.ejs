@@ -1,11 +1,15 @@
 <%- include('layout.ejs'); %>
-  <%- include('projectModal.ejs'); %>
-
+<%- include('PMtutorial.ejs'); %>
+<%- include('PMdelays.ejs'); %>
+<%- include('PMdcmotor.ejs'); %>
+<%- include('PMloops.ejs'); %>
+<%- include('PMifelse.ejs'); %>
+<%- include('PMcustom.ejs'); %>
 
     <div class="container">
       <div class="row justify-content-center" id="blockCategory">
         <div class="card-deck pt-5 pb-5">
-          <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg">
+          <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg1">
             <h5 class="card-title text-center" id="tutorial">TUTORIAL</h5>
             <img class="card-img-top" src="images/tutorial.png" width="100" height="180" alt="Card image cap" />
             <div class="card-body">
@@ -15,7 +19,7 @@
             </div>
           </div>
 
-          <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg1">
+          <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg2">
             <h5 class="card-title text-center" id="delay">DELAYS</h5>
             <img class="card-img-top" src="images/delay.png" width="100" height="180" alt="Card image cap" />
             <div class="card-body">
@@ -25,7 +29,7 @@
             </div>
           </div>
 
-          <div class="card border border-info pt-2">
+          <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg3">
             <h5 class="card-title text-center" id="dcmotor">DC MOTORS</h5>
             <img class="card-img-top" src="images/logoinsta.png" width="100" height="180" alt="Card image cap" />
             <div class="card-body">
@@ -37,7 +41,7 @@
         </div>
 
         <div class="card-deck pb-5">
-          <div class="card border border-info pt-2">
+          <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg4">
             <h5 class="card-title text-center" id="loops">LOOPS</h5>
             <img class="card-img-top" src="images/loops.png" width="100" height="180" alt="Card image cap" />
             <div class="card-body">
@@ -48,7 +52,7 @@
           </div>
 
 
-          <div class="card border border-info pt-2">
+          <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg5">
             <h5 class="card-title text-center" id="ifelse">IF ELSE</h5>
             <img class="card-img-top" src="images/ifelse.jpg" width="100" height="180" alt="Card image cap" />
             <div class="card-body">
@@ -59,15 +63,12 @@
             </div>
           </div>
 
-          <div class="card border border-info pt-2">
+          <div class="card border border-info pt-2" data-toggle="modal" data-target=".bd-example-modal-lg6">
             <h5 class="card-title text-center" id="custom">CUSTOM</h5>
             <img class="card-img-top" src="images/custom.png" width="100" height="180" alt="Card image cap" />
-            <div class="card-body">
+            <!-- <div class="card-body">
               <p class="card-text">Code a custom program for your robot car!</p>
-              <!-- <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p> -->
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
