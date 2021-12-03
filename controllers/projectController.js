@@ -3,7 +3,14 @@ const projectView = (req, res) => {
     } );
 }
 
+const projectDelayView = (req, res) => {
+    res.render("projectDelay", {
+    } );
+}
+
+
 
 module.exports =  {
-    projectView
+    projectView,
+    projectDelayView
 };
