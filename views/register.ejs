@@ -1,65 +1,134 @@
- 
 <%- include('layout.ejs'); %>
-<div class="container">
-<div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <h2>NODE.JS MVC</h2>
-                        <div class="card">
-                            <div class="card-header">Register</div>
-                            <div class="card-body">
+<%- include('tutorial.ejs'); %>
+<section>
+    <style>
+        .grid-container {
+            background: white;
+            display: block;
+            border: 1px solid black;
+        }
 
-                                <form class="form-horizontal" method="post" action="/register">
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 80px);
+            grid-template-rows: repeat(5, 80px);
+            grid-gap: 5px;
+        }
 
-                                    <div class="form-group">
-                                        <label for="name" class="cols-sm-2 control-label">Student Name</label>
-                                        <div class="cols-sm-10">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email" class="cols-sm-2 control-label">Student Email</label>
-                                        <div class="cols-sm-10">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                                <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="password" class="cols-sm-2 control-label">Password</label>
-                                        <div class="cols-sm-10">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
-                                        <div class="cols-sm-10">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                                <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group ">
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
-                                    </div>
-                                    <div class="login-register">
-                                        <a href="/login">Login</a>
-                                    </div>
-                                </form>
-                            </div>
+        .cell {
+            /* center the cell content */
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-family: Arial;
+            font-size: 3rem;
+            font-weight: bold;
+            background: white;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
 
-                        </div>
+        .col {
+            float: left;
+            width: 50%;
+        }
+    </style>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h3 class="text-center">Blocks</h3>
+                    </div>
+                    <div class="col-lg-8 ms-auto">
+                        <h3 class="text-center">Scripts Zone</h3>
                     </div>
                 </div>
-</div>
+                <div id="blocklyDiv" class="pb-4" style="height: 600px; width:700px;"></div>
+            </div>
+            <div class="col">
+                <div>
+                    <h3 class="text-center">Map</h3>
+                    <div class="grid-container">
+                        <div class="grid">
+                            <div class="cell" id="1" style="background-color: green;"></div>
+                            <div class="cell" id="2" style="background-color: black;"></div>
+                            <div class="cell" id="3" style="background-color: black;"></div>
+                            <div class="cell" id="4" style="background-color: black;"></div>
+                            <div class="cell" id="5" style="background-color: black;"></div>
+                            <div class="cell" id="6"></div>
+                            <div class="cell" id="7" style="background-color: black;"></div>
+                            <div class="cell" id="8" style="background-color: black;"></div>
+                            <div class="cell" id="9" style="background-color: black;"></div>
+                            <div class="cell" id="10" style="background-color: black;"></div>
+                            <div class="cell" id="11"></div>
+                            <div class="cell" id="12" style="background-color: black;"></div>
+                            <div class="cell" id="13" style="background-color: black;"></div>
+                            <div class="cell" id="14" style="background-color: black;"></div>
+                            <div class="cell" id="15" style="background-color: black;"></div>
+                            <div class="cell" id="16"></div>
+                            <div class="cell" id="17" style="background-color: black;"></div>
+                            <div class="cell" id="18" style="background-color: black;"></div>
+                            <div class="cell" id="19" style="background-color: black;"></div>
+                            <div class="cell" id="20" style="background-color: black;"></div>
+                            <div class="cell" id="21" style="background-color: red;"></div>
+                            <div class="cell" id="22" style="background-color: black;"></div>
+                            <div class="cell" id="23" style="background-color: black;"></div>
+                            <div class="cell" id="24" style="background-color: black;"></div>
+                            <div class="cell" id="25" style="background-color: black;"></div>
+                        </div>
+                    </div>
+                    <div class="container mt-2">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <button type="button" class="btn btn-primary btn-lg"
+                                    style="width:100%;">Download</button>
+                            </div>
+                            <div class="col-lg-6 ms-auto text-right">
+                                <button type="button" class="btn btn-danger btn-lg" style="width:100%;"
+                                    onclick="runCode()">Run</button>
+                            </div>
+                        </div>
+                        <h3 class="pt-2">Status: DISCONNECTED</h3>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+</section>
+<xml id="toolbox" style="display: none">
+        <block type="move_forward"></block>
+        <block type="controls_if"></block>
+        <block type="controls_repeat_ext"></block>
+        <!-- <block type="logic_compare"></block> -->
+        <!-- <block type="math_number"></block> -->
+        <!-- <block type="math_arithmetic"></block> -->
+        <!-- <block type="text"></block>
+            <block type="text_print"></block> -->
+        <block type="delay">
+            <field name="Time">0</field>
+            <field name="Move">forward</field>
+        </block>
+</xml>
+
+<script>
+
+</script>
+
+<script src="https://unpkg.com/blockly@6.20210701.0/blockly.min.js"></script>
+<!-- <script type="text/javascript" src="/js/blocklysettings.js"></script> -->
+<script src="/js/customblocks2.js"></script>
+<script type="text/javascript" src="/js/tutorial.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
 </body>
+
 </html>
