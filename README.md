@@ -10,9 +10,9 @@ How to run
 
 
 Development workflow
+The team splits the task between the team members according to the pages of the web portal such as home page, delay function page, while loop function page. Everyone will git clone from the master branch, then each team member will create their own development branch and work in their own branch. Once done, the member will push the changes to their own branch and submit a merge request to the master branch. Our tech lead, Terence, will look through the code and approve the merge request. We will have a meeting every two days to update on the features that are completed and whether are we on schedule.  
+
  
-
-
 UAT
 
 Use Case Diagram(no changes from M2)
