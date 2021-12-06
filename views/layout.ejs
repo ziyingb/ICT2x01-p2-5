@@ -9,6 +9,9 @@
     <link href="/css/styles.css" rel="stylesheet" id="bootstrap-css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
 
 </head>
 <body><!-- Just an image -->
@@ -30,12 +33,68 @@
               View
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/sensors">Sensors</a>
-              <a class="dropdown-item" href="/connections">Connection</a>
+              <a class="dropdown-item"data-toggle="modal" href="#SensorModal">Sensors</a>
+              <a class="dropdown-item"data-toggle="modal" href="#ConnectionModal">Connections</a>
               <a class="dropdown-item" href="/scripts">Scripts</a>
+            </div>
+            <div class="modal fade" id="SensorModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- SensorModal content-->
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <h4 class="modal-title">Sensors Data</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Motor 1: 10<br>
+                      Motor 2: 10<br>
+                      <br>
+                      Sensor 1: 
+                      <font color='green'>ON</font><br>
+                      Sensor 2: 
+                      <font color='green'>ON</font><br>
+                      Sensor 3: 
+                      <font color='red'>OFF</font><br>
+                      Sensor 4: 
+                      <font color='red'>OFF</font><br>
+                      <br>
+                      Last Updated: 18:36:05
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="ConnectionModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- ConnectionModal content-->
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <h4 class="modal-title">Connecting to Robot Car</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Please ensure that both the computer and robot car are connected to the WiFi.<br>
+                    <br>
+                    How to check if the car is connected:<br>
+                    1. Blinking LED means car is still trying to connect.<br>
+                    2. Solid LED means car is connected.<br>
+                    <br>
+                    Current IP Address: 192.13.14.129<br>
+                    Enter MAC Address:
+                    <input type="text" id="MACadd" name="MACadd" value="" ><br>
+                    </p>
+                    <div class="vertical-center">
+                        <input type="submit" value="Connect">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </li>
         </ul>
       </div>
     </nav>
-    
