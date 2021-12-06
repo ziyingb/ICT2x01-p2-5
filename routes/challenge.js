@@ -3,8 +3,12 @@ const {
     Mongoose
 } = require('mongoose');
 const {
-    registerView
-} = require('../controllers/loginController');
+    loopChallenge,
+    ifelseChallenge,
+    motorChallenge,
+    delayChallenge,
+    tutorial
+} = require('../controllers/challengeController');
 const router = express.Router();
 
 var itemRouter = express.Router({
@@ -18,7 +22,11 @@ const {
     response
 } = require('express');
 
-router.get('/challenge', registerView);
+router.get('/tutorialChallenge', tutorial);
+router.get('/motorChallenge', motorChallenge);
+router.get('/delayChallenge', delayChallenge);
+router.get('/ifelseChallenge', ifelseChallenge);
+router.get('/loopChallenge',loopChallenge)
 
 // API to create challenge
 router.post('/createChallenge/:projId', async (req, res) => {
@@ -87,14 +95,14 @@ router.get('/getProjectChallenges/:projId', async (req, res) => {
 
 // API to get one challenge details
 router.get('/getOneChallenge/:id', async (req, res) => {
-    console.log("HIT")
+    console.log(req.params.id)
     if (req.params.id = "61ad374602cd9adaff116ab1") {
-        res.render('challenge', {})
+        // res.render('challenge', {})
     } else if (req.params.id = "61ad38b7fff601bc97c3f557") {
-        res.render('challenge', {})
+        // res.render('challenge', {})
     } else if (req.params.id = "61ae4ce787b3a5ccfd680a8f") {
         console.log("MOTOR CHALLENGE")
-        res.render('motor', {})
+        router.get('/motorChallenge', motorChallenge);
     } else if (req.params.id = "61ae4da087b3a5ccfd680a92") {
         console.log("LOOP CHALLENGE")
         res.render('loop', {})

@@ -2,7 +2,6 @@ const tutorial = (req, res) => {
     res.render("tutorial", {});
 }
 
-
 const delayChallenge = (req, res) => {
 
     res.render("delay", {});

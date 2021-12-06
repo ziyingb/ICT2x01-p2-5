@@ -1,0 +1,123 @@
+<%- include('layout.ejs'); %>
+<section class="p-2 pl-3 pr-3 bg-light">
+    <h2>Delay</h2>
+    <div>
+        Learn How To Use Delays To Move The Car!
+    </div>
+</section>
+<section>
+    <style>
+        .grid-container {
+            background: white;
+            display: block;
+            border: 1px solid black;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 80px);
+            grid-template-rows: repeat(5, 80px);
+            grid-gap: 5px;
+        }
+
+        .cell {
+            /* center the cell content */
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-family: Arial;
+            font-size: 3rem;
+            font-weight: bold;
+            background: white;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .col {
+            float: left;
+            width: 50%;
+        }
+    </style>
+    <div class="container-fluid pt-3">
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h3 class="text-center">Blocks</h3>
+                    </div>
+                    <div class="col-lg-8 ms-auto">
+                        <h3 class="text-center">Scripts Zone</h3>
+                    </div>
+                </div>
+                <div id="blocklyDiv" class="pb-4" style="height: 600px; width:700px;"></div>
+            </div>
+            <div class="col">
+                <div>
+                    <h3 class="text-center">Map</h3>
+                    <div class="grid-container">
+                        <div class="grid">
+                            <div class="cell" id="1" style="background-color: green;"></div>
+                            <div class="cell" id="2" style="background-color: black;"></div>
+                            <div class="cell" id="3" style="background-color: black;"></div>
+                            <div class="cell" id="4" style="background-color: black;"></div>
+                            <div class="cell" id="5" style="background-color: black;"></div>
+                            <div class="cell" id="6"></div>
+                            <div class="cell" id="7" style="background-color: black;"></div>
+                            <div class="cell" id="8" style="background-color: black;"></div>
+                            <div class="cell" id="9" style="background-color: black;"></div>
+                            <div class="cell" id="10" style="background-color: black;"></div>
+                            <div class="cell" id="11"></div>
+                            <div class="cell" id="12" style="background-color: black;"></div>
+                            <div class="cell" id="13" style="background-color: black;"></div>
+                            <div class="cell" id="14" style="background-color: black;"></div>
+                            <div class="cell" id="15" style="background-color: black;"></div>
+                            <div class="cell" id="16"></div>
+                            <div class="cell" id="17" style="background-color: black;"></div>
+                            <div class="cell" id="18" style="background-color: black;"></div>
+                            <div class="cell" id="19" style="background-color: black;"></div>
+                            <div class="cell" id="20" style="background-color: black;"></div>
+                            <div class="cell" id="21" style="background-color: red;"></div>
+                            <div class="cell" id="22" style="background-color: black;"></div>
+                            <div class="cell" id="23" style="background-color: black;"></div>
+                            <div class="cell" id="24" style="background-color: black;"></div>
+                            <div class="cell" id="25" style="background-color: black;"></div>
+                        </div>
+                    </div>
+                    <div class="container mt-2">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <button type="button" class="btn btn-primary btn-lg"
+                                    style="width:100%;">Download</button>
+                            </div>
+                            <div class="col-lg-6 ms-auto text-right">
+                                <button type="button" class="btn btn-danger btn-lg" style="width:100%;"
+                                    onclick="runCode()">Run</button>
+                            </div>
+                        </div>
+                        <h3 class="pt-2">Status: DISCONNECTED</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</section>
+<xml id="toolbox" style="display: none">
+    <!-- <block type="move_forward"></block> -->
+    <!-- <block type="controls_if"></block>
+    <block type="controls_repeat_ext"></block> -->
+    <block type="motor_turn"> </block>
+    <block type="delay">
+        <field name="Time">0</field>
+        <field name="Move">forward</field>
+    </block>
+</xml>
+
+
+<!-- BLOCKLY LIB -->
+<script src="https://unpkg.com/blockly@6.20210701.0/blockly.min.js"></script>
+<!-- CUSTOM BLOCK GENERATOR FOR EACH CHALLENGE -->
+<script src="/js/customblocks2.js"></script>
+
+</body>
+
+</html>
