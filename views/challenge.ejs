@@ -1,5 +1,10 @@
 <%- include('layout.ejs'); %>
-<%- include('tutorial.ejs'); %>
+<section class="p-2 pl-3 pr-3 bg-light">
+    <h2>Challenge: <%= challenge.challengeName %></h2>
+    <div>
+        <%= challenge.challengeGuide %>
+    </div>
+</section>
 <section>
     <style>
         .grid-container {
@@ -33,7 +38,7 @@
             width: 50%;
         }
     </style>
-    <div class="container-fluid">
+    <div class="container-fluid pt-3">
         <div class="row">
             <div class="col">
                 <div class="row">
@@ -97,19 +102,17 @@
         </div>
 </section>
 <xml id="toolbox" style="display: none">
-        <block type="move_forward"></block>
-        <block type="controls_if"></block>
-        <block type="controls_repeat_ext"></block>
-        <block type="motor_turn"> </block>
-        <!-- <block type="logic_compare"></block> -->
-        <!-- <block type="math_number"></block> -->
-        <!-- <block type="math_arithmetic"></block> -->
-        <!-- <block type="text"></block>
-            <block type="text_print"></block> -->
-        <block type="delay">
-            <field name="Time">0</field>
-            <field name="Move">forward</field>
-        </block>
+    <!-- <% for (var i=0; i<challenge.blocks.length; i++) { %>
+    <block type=<%=challenge.blocks[i]%> </block>
+    <% } %> -->
+    <block type="move_forward"></block>
+    <block type="controls_if"></block>
+    <block type="controls_repeat_ext"></block>
+    <block type="motor_turn"> </block>
+    <block type="delay">
+        <field name="Time">0</field>
+        <field name="Move">forward</field>
+    </block>
 </xml>
 
 <script>
@@ -121,17 +124,7 @@
 <!-- <script type="text/javascript" src="/js/blocklysettings.js"></script> -->
 <!-- CUSTOM BLOCK GENERATOR FOR EACH CHALLENGE -->
 <script src="/js/customblocks2.js"></script>
-<script type="text/javascript" src="/js/tutorial.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-</script>
 </body>
 
 </html>

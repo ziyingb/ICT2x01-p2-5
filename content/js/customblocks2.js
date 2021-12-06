@@ -46,15 +46,18 @@ Blockly.Blocks['delay'] = {
 
 
 Blockly.Blocks['motor_turn'] = {
-  init: function() {
+  init: function () {
     this.appendDummyInput()
-        .appendField("Motor_turn")
-        .appendField(new Blockly.FieldDropdown([["right","right"], ["left","left"]]), "direction");
+      .appendField("Motor_turn")
+      .appendField(new Blockly.FieldDropdown([
+        ["right", "right"],
+        ["left", "left"]
+      ]), "direction");
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setColour(230);
- this.setTooltip("");
- this.setHelpUrl("");
+    this.setTooltip("");
+    this.setHelpUrl("");
   }
 };
 
@@ -64,7 +67,7 @@ var cellID = 1;
 
 var workspace = Blockly.inject('blocklyDiv', {
   media: '../../media/',
-  
+
   toolbox: document.getElementById('toolbox'),
   comments: true,
   collapse: false,
@@ -210,19 +213,36 @@ Blockly.JavaScript['delay'] = function (block) {
   return code;
 };
 
-Blockly.JavaScript['motor_turn'] = function(block) {
+Blockly.JavaScript['motor_turn'] = function (block) {
   var dropdown_direction = block.getFieldValue('direction');
   // TODO: Assemble JavaScript into code variable.
-  if (dropdown_direction === "left"){
+  if (dropdown_direction === "left") {
     direction = 4;
     var code = document.getElementById(cellID).style.cssText = "background-image: url(image/car.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; transform: rotate(270deg);"
-  } 
-  else if (dropdown_direction === "right"){
+  } else if (dropdown_direction === "right") {
     direction = 2;
-    var code = document.getElementById(cellID).style.cssText = "background-image: url(image/car.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; transform: rotate(90deg);"  
+    var code = document.getElementById(cellID).style.cssText = "background-image: url(image/car.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; transform: rotate(90deg);"
   }
   alert(direction);
   return code;
 };
 
 var commands = "";
+
+// A $( document ).ready() block.
+$(document).ready(function () {
+  var url = window.location.href;
+  var challengeId = url.split('/')[4];
+  $.ajax({
+    url: '/loadChallenge/' + challengeId,
+    type: 'GET',
+    success: function (response) {
+      console.log(response)
+    },
+    error: function (err) {
+      console.log(err)
+    }
+  })
+
+});
+

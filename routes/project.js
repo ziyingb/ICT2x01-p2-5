@@ -4,7 +4,6 @@ const {
     Mongoose
 } = require('mongoose');
 const {
-    homeView
 } = require('../controllers/loginController');
 const {
     projectView,
@@ -22,25 +21,6 @@ router.get('/', async (req, res) => {
         projectType: 1,
         projectDesc: 1
     }).then(async (result) => {
-        // console.log(result)
-        // let projectItem = []
-
-        // for (var i = 0; i < result.length; i++) {
-        //     let challenges = await Challenge.find({
-        //         projectId: result[i]._id
-        //     }).populate('Project')
-
-        //     console.log(challenges)
-
-        //     // let a = {
-        //     //     project: result[i],
-        //     //     projChallenges: challenges
-        //     // }
-
-        //     // projectItem.push(a)
-        // }
-        // console.log(projectItem)
-
         res.render('home', {
             projects: result
         })

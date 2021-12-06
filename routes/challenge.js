@@ -68,13 +68,28 @@ router.get('/getOneChallenge/:id', async (req, res) => {
     Challenge.find({
         _id: req.params.id
     }).then((result) => {
+        // res.send(result[0])
+        res.render('challenge', {
+            challenge: result[0]
+        })
+    }).catch((err) => {
+        console.log(err)
+        res.status(500).send("Error Inserting Project")
+    })
+})
+
+router.get('/loadChallenge/:id', async (req, res) => {
+    Challenge.find({
+        _id: req.params.id
+    }).then((result) => {
         res.send(result[0])
     }).catch((err) => {
         console.log(err)
         res.status(500).send("Error Inserting Project")
     })
-
 })
+
+
 
 
 
