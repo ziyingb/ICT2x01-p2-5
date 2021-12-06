@@ -9,7 +9,6 @@ const projectDelayView = (req, res) => {
 }
 
 
-
 module.exports =  {
     projectView,
     projectDelayView

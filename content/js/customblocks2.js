@@ -44,68 +44,23 @@ Blockly.Blocks['delay'] = {
   }
 };
 
-/*var start = 1;
-var end = 25;*/
+
+Blockly.Blocks['motor_turn'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Motor_turn")
+        .appendField(new Blockly.FieldDropdown([["right","right"], ["left","left"]]), "direction");
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+
+
 var cellID = 1;
-
-/*function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-}
-
-function movement(cellID){
-  console.log(cellID);
-  document.getElementById(cellID).style.backgroundColor = 'yellow';
-
-}
-
-function forward(cellID, delay){
-  if(delay == 0){
-    cellID = cellID + 5;
-    console.log(cellID);  
-    var code = document.getElementById(cellID).style.backgroundColor = 'yellow'; 
-  } else {
-    for (var i = 0; i < delay; i++){
-      cellID = cellID + 5;
-      console.log(cellID);
-      var code = document.getElementById(cellID).style.backgroundColor = 'yellow'; 
-      //setTimeout(function(){movement(cellID)},100);
-      sleep(2000); 
-    }
-  }
-}*/
-
-// document.addEventListener("DOMContentLoaded", function () {
-
-//   var toolbox = document.getElementById('toolbox');
-//   var workspace = Blockly.inject('blocklyDiv', {
-//     comments: true,
-//     collapse: false,
-//     disable: true,
-//     maxBlocks: 4,
-//     grid: {
-//       spacing: 25,
-//       length: 3,
-//       colour: '#ccc',
-//       snap: true
-//     },
-//     toolbox: toolbox,
-//     zoom: {
-//       controls: true,
-//       wheel: false,
-//       startScale: 1.0,
-//       maxScale: 4,
-//       minScale: 0.25,
-//       scaleSpeed: 1.1
-//     }
-//   });
-
-// });
-
 
 var workspace = Blockly.inject('blocklyDiv', {
   media: '../../media/',
@@ -145,7 +100,6 @@ function runCode() {
     alert("out of bound. please restart");
   }*/
 }
-
 
 Blockly.JavaScript['delay'] = function (block) {
   var dropdown_time = block.getFieldValue('Time');
@@ -253,6 +207,21 @@ Blockly.JavaScript['delay'] = function (block) {
   //var code = '...;\n';
 
 
+  return code;
+};
+
+Blockly.JavaScript['motor_turn'] = function(block) {
+  var dropdown_direction = block.getFieldValue('direction');
+  // TODO: Assemble JavaScript into code variable.
+  if (dropdown_direction === "left"){
+    direction = 4;
+    var code = document.getElementById(cellID).style.cssText = "background-image: url(image/car.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; transform: rotate(270deg);"
+  } 
+  else if (dropdown_direction === "right"){
+    direction = 2;
+    var code = document.getElementById(cellID).style.cssText = "background-image: url(image/car.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; transform: rotate(90deg);"  
+  }
+  alert(direction);
   return code;
 };
 

@@ -10,7 +10,7 @@ const projectSchema = mongoose.Schema({
         type: String
     },
     projectDesc: {
-        type: Number
+        type: String
     }
 }, {
     collection: 'Project'

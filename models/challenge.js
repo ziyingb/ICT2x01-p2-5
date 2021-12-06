@@ -2,7 +2,7 @@ mongoose = require('mongoose')
 const challengeSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     
-    userId: {
+    projectId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Project"
     },
@@ -14,11 +14,16 @@ const challengeSchema = mongoose.Schema({
     challengeGuide: {
         type: String
     },
-
+    
     challengeLimit: {
         type: Number
     },
-
+    start:{
+        type: Number
+    },
+    end:{
+        type: Number
+    },
     blocks: {
         type: [{type:String}]
     }

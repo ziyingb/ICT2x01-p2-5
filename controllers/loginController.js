@@ -1,5 +1,5 @@
-//js
 
+//js
 const registerView = (req, res) => {
     res.render("register", {
     } );
