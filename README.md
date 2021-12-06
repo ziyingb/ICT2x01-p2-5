@@ -27,5 +27,4 @@ System State Diagram(no changes from M2)
 Whitebox Testing : Using Mocha & Chai to test REST APIs
 
 
-https://user-images.githubusercontent.com/73781800/144918228-0a980b91-91e3-4700-8e21-b470c31e0257.mp4
 
