@@ -1,3 +1,4 @@
+NodeJS Application with Embedded JavaScript(EJS) and Mongoose (MongoDB)
 How to run
 
 1. git clone "https://github.com/ziyingb/ICT2x01-p2-5.git" to your folder
@@ -6,7 +7,7 @@ How to run
 4. type 'npm install' in terminal 
 5. type 'node -v' in terminal to verify installation
 6. type 'npm start' in terminal
-7. go to browser "localhost:3000/home"
+7. go to browser "localhost:3000"
 
 
 Development workflow
