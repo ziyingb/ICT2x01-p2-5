@@ -6,8 +6,14 @@ const registerView = (req, res) => {
 }
 
 const loginView = (req, res) => {
-
-    res.render("login", {
+    temp.getAll((err, data) => {
+        if (err)
+          res.status(500).send({
+            message:
+              err.message || "Some error occurred while retrieving customers.",
+          });
+        else res.render("login", { data
+      });
     } );
 }
 
