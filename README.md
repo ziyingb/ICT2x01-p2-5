@@ -26,5 +26,7 @@ System State Diagram(no changes from M2)
 
 Whitebox Testing : Using Mocha & Chai to test REST APIs
 
+Due to large file size, the team has uploaded the video to YouTube. Below is the link to access the Whitebox Testing video.
+https://youtu.be/ckaNRMwFhug
 
 
