@@ -26,8 +26,10 @@ const challengeSchema = mongoose.Schema({
     },
     blocks: {
         type: [{type:String}]
+    },
+    url:{
+        type:String
     }
-    
 }, {
     collection: 'Challenge'
 });

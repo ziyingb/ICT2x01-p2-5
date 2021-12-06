@@ -94,24 +94,24 @@ router.get('/getProjectChallenges/:projId', async (req, res) => {
 // })
 
 // API to get one challenge details
-router.get('/getOneChallenge/:id', async (req, res) => {
-    console.log(req.params.id)
-    if (req.params.id = "61ad374602cd9adaff116ab1") {
-        // res.render('challenge', {})
-    } else if (req.params.id = "61ad38b7fff601bc97c3f557") {
-        // res.render('challenge', {})
-    } else if (req.params.id = "61ae4ce787b3a5ccfd680a8f") {
-        console.log("MOTOR CHALLENGE")
-        router.get('/motorChallenge', motorChallenge);
-    } else if (req.params.id = "61ae4da087b3a5ccfd680a92") {
-        console.log("LOOP CHALLENGE")
-        res.render('loop', {})
-    } else if (req.params.id = "61ae4db687b3a5ccfd680a94") {
-        console.log("IFELSE CHALLENGE")
-        res.render('ifelse', {})    
-    } else {
-        res.render('home',{})
-    }
+// router.get('/getOneChallenge/:id', async (req, res) => {
+//     console.log(req.params.id)
+//     if (req.params.id = "61ad374602cd9adaff116ab1") {
+//         // res.render('challenge', {})
+//     } else if (req.params.id = "61ad38b7fff601bc97c3f557") {
+//         // res.render('challenge', {})
+//     } else if (req.params.id = "61ae4ce787b3a5ccfd680a8f") {
+//         console.log("MOTOR CHALLENGE")
+//         router.get('/motorChallenge', motorChallenge);
+//     } else if (req.params.id = "61ae4da087b3a5ccfd680a92") {
+//         console.log("LOOP CHALLENGE")
+//         res.render('loop', {})
+//     } else if (req.params.id = "61ae4db687b3a5ccfd680a94") {
+//         console.log("IFELSE CHALLENGE")
+//         res.render('ifelse', {})    
+//     } else {
+//         res.render('home',{})
+//     }
     // if (!req.params.id) {
     //     res.status(400).send("Invalid Challenge ID")
     // } else {
@@ -129,7 +129,6 @@ router.get('/getOneChallenge/:id', async (req, res) => {
     //         res.status(500).send("Error Retrieving Challenge")
     //     })
     // }
-})
 
 // API to load challenge details using jquery
 router.get('/loadChallenge/:id', async (req, res) => {
