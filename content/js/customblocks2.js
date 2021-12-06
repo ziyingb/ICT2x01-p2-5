@@ -239,7 +239,7 @@ $(document).ready(function () {
     success: function (response) {
       console.log(response)
     },
-    error: function (err) {
+    error: function (err) { 
       console.log(err)
     }
   })
