@@ -65,25 +65,25 @@ router.get('/getProjectChallenges/:projId', async (req, res) => {
 })
 
 // API to get one challenge details
-router.get('/getOneChallenge/:id', async (req, res) => {
-    if (!req.params.id) {
-        res.status(400).send("Invalid Challenge ID")
-    } else {
-        Challenge.find({
-            _id: req.params.id
-        }).then((result) => {
+// router.get('/getOneChallenge/:id', async (req, res) => {
+//     if (!req.params.id) {
+//         res.status(400).send("Invalid Challenge ID")
+//     } else {
+//         Challenge.find({
+//             _id: req.params.id
+//         }).then((result) => {
 
 
-            res.render('challenge', {
-                challenge: result[0]
-            })
+//             res.render('challenge', {
+//                 challenge: result[0]
+//             })
 
-        }).catch((err) => {
-            console.log(err)
-            res.status(500).send("Error Retrieving Challenge")
-        })
-    }
-})
+//         }).catch((err) => {
+//             console.log(err)
+//             res.status(500).send("Error Retrieving Challenge")
+//         })
+//     }
+// })
 
 // API to get one challenge details
 router.get('/getOneChallenge/:id', async (req, res) => {
