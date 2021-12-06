@@ -9,6 +9,8 @@
     <link href="/css/styles.css" rel="stylesheet" id="bootstrap-css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
 <body><!-- Just an image -->
@@ -30,9 +32,25 @@
               View
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Sensors</a>
+              <a class="dropdown-item"data-toggle="modal" href="#myModal">Sensors</a>
               <a class="dropdown-item" href="#">Connection</a>
               <a class="dropdown-item" href="#">Scripts</a>
+            </div>
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <h4 class="modal-title">Sensors</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Some Sensors in the modal.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </li>
         </ul>
